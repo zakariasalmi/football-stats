@@ -97,7 +97,7 @@ while True:
 
 		# compute the bounding box for the contour, draw it on the frame
 		(x, y, w, h) = cv2.boundingRect(contour)
-		basePoint = ((x + (w/2)), (y + h))
+		basePoint = (int(x + (w/2)), int(y + h))
 
 		# get the top-view relative coordinates
 		(xbRel, ybRel) = heatmap.getPosRelativeCoordinates(basePoint, coords)

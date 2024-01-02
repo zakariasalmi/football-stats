@@ -14,7 +14,7 @@ def getVideoSource(args):
 	# if the video argument is None, then read from webcam
 	if args.get("video", None) is None:
 		video = cv2.VideoCapture(0)
-		time.sleep(0.25)
+		#time.sleep(0.25)
 
 	# otherwise read from a video file
 	else:

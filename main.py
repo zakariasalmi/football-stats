@@ -102,7 +102,7 @@ while True:
 		(xbRel, ybRel) = heatmap.getPosRelativeCoordinates(basePoint, coords)
 
 		if xbRel < 0 or xbRel > resultWidth or ybRel < 0 or ybRel > resultHeight:
-			print "Skipped a contour, not a cool contour"
+			print ("Skipped a contour, not a cool contour")
 		else:
 			# draw rectangle around the detected object and a red point in the center of its base
 			cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
@@ -123,7 +123,7 @@ while True:
 	def leftClickDebug(event, x, y, flags, param):
 		if event == cv2.EVENT_LBUTTONDOWN:
 			resultCoord = windowToFieldCoordinates((x, y), coords, resultWidth, resultHeight)
-			print "Coordinates to real coordinates", resultCoord
+			print ("Coordinates to real coordinates", resultCoord)
 	# UNCOMMENT IF YOU WANT TO DEBUG
 	# cv2.setMouseCallback('frame', leftClickDebug)
 

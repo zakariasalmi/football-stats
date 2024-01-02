@@ -32,7 +32,8 @@ frameCount = 0
 mouse = Mouse()
 
 # get BackgroundSubtractor object
-fgbg = cv2.BackgroundSubtractorMOG2()
+#fgbg = cv2.BackgroundSubtractorMOG2()
+fgbg = cv2.createBackgroundSubtractorMOG2()
 
 # get top-view field dimensions
 resultWidth = args["fieldwidth"]
